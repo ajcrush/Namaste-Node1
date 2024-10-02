@@ -1,5 +1,6 @@
 require("./xyz.js");
 const { x, calculateSum } = require("./sum.js");
+const data = require("./data.json");
 // import { calculateSum } from "./sum.js";
 var name1 = "Namaste NodeJS";
 var a = 10;
@@ -8,4 +9,4 @@ console.log(name1);
 calculateSum(a, b);
 //console.log(x);
 console.log(a + b);
-console.log(this);
+console.log(data);
