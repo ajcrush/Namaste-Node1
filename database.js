@@ -17,7 +17,7 @@ async function main() {
     phoneNumber: "8288428242",
   };
   const insertResult = await collection.insertMany([data]);
-  console.log("Inserted documents =>", insertResult);
+  console.log("Inserted documents=>", insertResult);
   // Read
   const findResult = await collection.find({}).toArray();
   console.log("Found documents =>", findResult);
