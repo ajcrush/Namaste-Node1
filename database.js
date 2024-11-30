@@ -1,5 +1,4 @@
 const { MongoClient } = require("mongodb");
-require("mongodb");
 const url =
   "mongodb+srv://mohitanand89878:KaXQhLGwVJG1I5Xc@namastenode.gvwka.mongodb.net/";
 const client = new MongoClient(url);
@@ -16,11 +15,13 @@ async function main() {
     city: "Mumbai",
     phoneNumber: "8288428242",
   };
-  const insertResult = await collection.insertMany([data]);
-  console.log("Inserted documents=>", insertResult);
-  // Read
-  const findResult = await collection.find({}).toArray();
-  console.log("Found documents =>", findResult);
+  // const insertResult = await collection.insertMany([data]);
+  // console.log("Inserted documents=>", insertResult);
+  // // Read
+  // const findResult = await collection.find({}).toArray();
+  // console.log("Found documents =>", findResult);
+  const result = await collection.find({ firstname: "dinesh" }).count();
+  console.log(result);
 
   return "done.";
 }
